@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reliable Web Bonus</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="buttonWrapper">
+      <button id="postButton">Post</button>
+      <input id="postInput" placeholder="Enter Device ID"></input>
+      <span id="postMessage"></span>
+    </div>
+    <div class="buttonWrapper">
+      <button id="getButton">Get</button>
+      <input id="getInput" placeholder="Enter Device ID"></input>
+      <span id="getMessage"></span>
+    </div>
+    <div id="deviceListWrapper">
+      <div class="deviceListHeader">
+        <span>Device ID</span><span>    Event Count</span><span> Is Processing</span>
+      </div>
+      <div class="deviceList">
+      </div>
+    </div>
+  </body>
+</html>

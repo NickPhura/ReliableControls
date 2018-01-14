@@ -1,0 +1,29 @@
+.buttonWrapper {
+  padding-bottom: 5px;
+}
+
+.deviceListWrapper {
+  display: flex;
+  flex-direction: column;
+  width:300px;
+}
+
+.deviceListHeader {
+  display: flex;
+  flex-grow: 1;
+}
+.deviceListHeader span {
+  border: 1px solid grey;
+  padding: 5px;
+  width: 100px;
+}
+
+.deviceItem {
+  display: flex;
+  flex-grow: 1;
+}
+.deviceItem span {
+  border: 1px solid grey;
+  padding: 5px;
+  width: 100px;
+}
