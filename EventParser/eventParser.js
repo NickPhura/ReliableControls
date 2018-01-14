@@ -27,10 +27,10 @@ const record = {
  */
 function ParseEvents(deviceID, eventLog) {
   if (deviceID === undefined || deviceID == null) {
-    throw "DeviceID must not be null or undefined!";
+    throw new Error("deviceID must not be null or undefined!");
   }
   if (!eventLog) {
-    throw "eventLog must not be null or undefined!";
+    throw new Error("eventLog must not be null or undefined!");
   }
 
   if (!faultCountsById[deviceID]) {
