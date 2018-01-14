@@ -1,6 +1,6 @@
 const assert = require('assert');
 const eventParser = require('../../eventParser')
-const utils = require('../../utils')
+const utils = require('../utils/utils')
 
 // A basic set of end-to-end unit tests.
 
