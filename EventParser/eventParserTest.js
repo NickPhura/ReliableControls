@@ -7,11 +7,9 @@ const utils = require('./utils')
 // Possibly there could be some way of dynamically generating test logs, but possibly more work than is worthwhile.
 
 // read log file
-const logFile = utils.readFile('TestLogs/testLog6.txt');
-//  turn log file into array of log messages
-const logMessages = logFile.match(/(.+)[\r\n]*/g);
+const logFile = utils.readFile('TestLogs/testLog1.txt');
 
-eventParser.ParseEvents(2018, logMessages);
+eventParser.ParseEvents(2018, logFile);
 
 let device2018Faults = eventParser.GetEventCount(2018)
 console.log('faults detected: ' + device2018Faults);

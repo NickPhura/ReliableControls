@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/NickPhura/ReliableControls#readme",
   "dependencies": {
-    "eslint": "^4.15.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
     "fs-extra": "^5.0.0",
     "moment": "^2.20.1"
   }

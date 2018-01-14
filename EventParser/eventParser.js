@@ -23,13 +23,23 @@ const record = {
  * Parse and accumulate event information from the given log data.
  *
  * @param deviceID ID of the device that the log is associated with.
- * @param eventLog An array of log messages.
+ * @param eventLog A new-line deliminated log file.
  */
 function ParseEvents(deviceID, eventLog) {
-  if(!faultCountsById[deviceID]) {
-    // add unique deviceID
+  if (deviceID === undefined || deviceID == null) {
+    throw "DeviceID must not be null or undefined!";
+  }
+  if (!eventLog) {
+    throw "eventLog must not be null or undefined!";
+  }
+
+  if (!faultCountsById[deviceID]) {
+    // add unique deviceIDs
     faultCountsById[deviceID] = 0;
   }
+
+  // turn log file into array of log messages
+  const logMessages = eventLog.match(/(.+)[\r\n]*/g);
 
   /*
    * A minimum of 3 log messages are required to determine a fault.
@@ -38,8 +48,7 @@ function ParseEvents(deviceID, eventLog) {
    * log 3: stage 2
    * log 4: stage 0
    */
-  if(eventLog.length < 3)
-  {
+  if (logMessages.length < 3) {
     return;
   }
 
@@ -49,9 +58,8 @@ function ParseEvents(deviceID, eventLog) {
   let foundStage2 = false;
 
   // iterate over array of log messages
-  for(let i = 0; i < eventLog.length; i++)
-  {
-    const matches = eventLog[i].match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\t(\d)+/);
+  for (let i = 0; i < logMessages.length; i++) {
+    const matches = logMessages[i].match(/(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\t(\d)+/);
     if (!matches) {
       continue;
     }
@@ -109,7 +117,7 @@ function updateRecord(currentStage, currentTimestamp) {
 
   const difference = getDifferenceInMilliseconds(record.currentTimestamp, record.previousTimestamp);
 
-  if(record.currentStage === record.previousStage) {
+  if (record.currentStage === record.previousStage) {
     record.timeInCurrentStage += difference;
     record.timeInPreviousStage = 0;
   } else {
