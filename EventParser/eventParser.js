@@ -117,6 +117,8 @@ function updateRecord(currentStage, currentTimestamp) {
 
   const difference = getDifferenceInMilliseconds(record.currentTimestamp, record.previousTimestamp);
 
+  // we need to keep track of consecutive stages of the same type, as the time spent in that stage must be accumulated.
+  // only when a stage of a different type is found, can we finally finish the tally of the time spent in the previous stage.
   if (record.currentStage === record.previousStage) {
     record.timeInCurrentStage += difference;
     record.timeInPreviousStage = 0;
