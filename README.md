@@ -8,6 +8,8 @@ Reliable Controls interview coding challenge.
   * Contains the logic to parse the event logs.
 * eventParserTest.js
   * Basic logic to call the eventParser with one of the pre-made test logs.
+* utils.js
+  * Utility functions for use in testing.
 * TestLogs
   * 9 basic test log files.
 
