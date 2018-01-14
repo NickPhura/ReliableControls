@@ -6,11 +6,11 @@ Reliable Controls interview coding challenge.
 #### Key Components
 * eventParser.js
   * Contains the logic to parse the event logs.
-* eventParserTest.js
+* test/specs/eventParser-spec.js
   * Basic logic to call the eventParser with one of the pre-made test logs.
-* utils.js
+* test/util/utils.js
   * Utility functions for use in testing.
-* TestLogs
+* test/specs/TestLogs
   * 9 basic test log files.
 
 #### Running The Test(s)
