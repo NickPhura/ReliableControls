@@ -1,0 +1,26 @@
+{
+  "name": "ReliableChallenge",
+  "version": "1.0.0",
+  "description": "Reliable Controls interview coding challenge.",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickPhura/ReliableControls.git"
+  },
+  "author": "Nick Phura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickPhura/ReliableControls/issues"
+  },
+  "homepage": "https://github.com/NickPhura/ReliableControls#readme",
+  "dependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "fs-extra": "^5.0.0",
+    "moment": "^2.20.1"
+  }
+}
