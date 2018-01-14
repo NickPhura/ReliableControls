@@ -14,9 +14,9 @@ Reliable Controls interview coding challenge.
 #### Running The Test(s)
 * run `npm test`
 
-#### Assumptions
-* Assumed that the log files are text files.  Other file types not tested.
-* Assumed that a valid
+#### General Developer Commentary
+* There are a basic set of end-to-end unit tests.
+* Testing only covers some of the basic happy paths. Extreme edge cases, like what would happen if the log file was corrupt, are not specifically taken into account.
 
 ## WebBonus
 #### Key Components
@@ -27,7 +27,6 @@ Reliable Controls interview coding challenge.
 * style.css
   * Basic css to display content more cleanly.
 
-## General Developer Commentary
-* There are a basic set of end-to-end unit tests.
-* Testing only covers some of the basic happy paths. Extreme edge cases, like what would happen if the log file was corrupt, are not specifically taken into account.
-* For the web bonus, the css is minimal as fancier css doesn't impact the functionality.
+#### General Developer Commentary
+* The css is minimal as fancier css doesn't impact the functionality.
+* A CORS issue was encountered when running the webpage outside of Internet Explorer. As a result, the web bonus was only developred/tested against Internet Explorer.
