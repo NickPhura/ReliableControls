@@ -4,7 +4,7 @@
   "description": "Reliable Controls interview coding challenge.",
   "main": "main.js",
   "scripts": {
-    "test": "node eventParserTest.js"
+    "test": "node ./node_modules/mocha/bin/mocha test/specs"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "dependencies": {
     "fs-extra": "^5.0.0",
     "moment": "^2.20.1"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0"
   }
 }
