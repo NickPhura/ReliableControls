@@ -60,8 +60,6 @@ function ParseEvents(deviceID, eventLog) {
 
     updateRecord(stage, timestamp);
 
-    console.log(record);
-
     if (foundStage3 === false) {
       foundStage3 = isStage3Error();
     }
@@ -109,15 +107,7 @@ function updateRecord(currentStage, currentTimestamp) {
   record.currentStage = currentStage;
   record.currentTimestamp = currentTimestamp;
 
-  console.log(record.currentStage);
-  console.log(record.currentTimestamp);
-
-  console.log(currentStage);
-  console.log(currentTimestamp);
-
   const difference = getDifferenceInMilliseconds(record.currentTimestamp, record.previousTimestamp);
-
-  console.log(difference);
 
   if(record.currentStage === record.previousStage) {
     record.timeInCurrentStage += difference;
@@ -152,7 +142,6 @@ function getDifferenceInMilliseconds(timestamp1, timestamp2) {
  */
 function isStage3Error() {
   if(record.previousStage == 3 && record.timeInPreviousStage >= (1000 * 60 * 5)) {
-    console.log('**** found stage 3');
     return true;
   }
   return false;

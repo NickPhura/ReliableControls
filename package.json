@@ -4,7 +4,7 @@
   "description": "Reliable Controls interview coding challenge.",
   "main": "main.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node eventParserTest.js"
   },
   "repository": {
     "type": "git",
